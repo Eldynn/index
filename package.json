@@ -1,7 +1,7 @@
 {
   "name": "index",
   "version": "0.0.1",
-  "description": "SEE DESCRIPTION IN ../README.md",
+  "description": "SEE DESCRIPTION IN README.md",
   "main": "./src/index.ts",
   "scripts": {
     "start": "rollup -c -w",
