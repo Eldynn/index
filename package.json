@@ -1,0 +1,103 @@
+{
+  "name": "index",
+  "version": "0.0.1",
+  "description": "SEE DESCRIPTION IN ../README.md",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "rollup -c -w",
+    "check-types": "tsc --watch",
+    "test": "jest --colors -b -e --logHeapUsage",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eldynn/index.git"
+  },
+  "keywords": [
+    "typescript",
+    "library"
+  ],
+  "author": "Robin BAILLARGEAUX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eldynn/index/issues"
+  },
+  "homepage": "https://github.com/Eldynn/index#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4",
+    "rollup": "^1.9.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.20.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.2"
+  },
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "not last 2 ie version",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">= 11.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier",
+      "import"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ]
+    },
+    "settings": {
+      "import/parsers": {
+        "@typescript-eslint/parser": [
+          ".ts"
+        ]
+      },
+      "import/resolver": {
+        "typescript": {}
+      }
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
