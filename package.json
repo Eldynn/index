@@ -7,7 +7,8 @@
     "tests": "jest --coverage --colors --bail --expand",
     "tests-watch": "npm run tests -- --watch",
     "build": "rollup --config",
-    "build-watch": "npm run build -- --watch"
+    "build-watch": "npm run build -- --watch",
+    "docs": "tplant --input src/index.ts > docs/index.puml"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.20.1",
     "rollup-plugin-uglify": "^6.0.2",
+    "tplant": "^2.0.3",
     "ts-jest": "^24.0.2",
     "tslib": "^1.9.3",
     "typescript": "^3.4.2"
