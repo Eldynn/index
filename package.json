@@ -111,7 +111,7 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testRegex": "/tests/.*\\.spec\\.ts$",
+    "testRegex": "/specs/.*\\.spec\\.ts$",
     "moduleFileExtensions": [
       "js",
       "ts"
