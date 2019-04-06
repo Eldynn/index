@@ -7,6 +7,7 @@ export default {
   plugins: [typescript(), sourcemaps(), uglify()],
   output: {
     file: './build/index.js',
+    name: 'Index',
     format: 'umd',
     sourcemap: true
   }
