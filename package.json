@@ -108,5 +108,13 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testRegex": "/tests/.*\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ]
   }
 }
