@@ -118,7 +118,8 @@
       "src/*.ts"
     ],
     "coverageReporters": [
-      "text"
+      "text",
+      "html"
     ]
   }
 }
