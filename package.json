@@ -4,8 +4,8 @@
   "description": "SEE DESCRIPTION IN README.md",
   "main": "./src/index.ts",
   "scripts": {
-    "tests": "jest --coverage --colors --bail --expand",
-    "tests-watch": "npm run tests -- --watch",
+    "test": "jest --coverage --colors --bail --expand",
+    "test-watch": "npm run test -- --watch",
     "build": "rollup --config",
     "build-watch": "npm run build -- --watch",
     "docs": "tplant --input src/index.ts > docs/index.puml"
