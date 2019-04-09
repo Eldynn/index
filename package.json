@@ -104,7 +104,8 @@
     ],
     "*.ts": [
       "eslint --fix",
-      "git add"
+      "git add",
+      "npm run tests"
     ]
   },
   "jest": {
