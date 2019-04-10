@@ -9,10 +9,6 @@ export class Member {
 
   public group: Group;
 
-  public static build(user: User, type: MemberType, group: Group): Member {
-    return new Member(user, type, group);
-  }
-
   public constructor(user: User, type: MemberType, group: Group) {
     this.user = user;
     this.type = type;
@@ -25,5 +21,9 @@ export class Member {
   public destroy(): void {
     this.group.delete(this);
     this.user.delete(this);
+  }
+
+  public static build(user: User, type: MemberType, group: Group): Member {
+    return new Member(user, type, group);
   }
 }
