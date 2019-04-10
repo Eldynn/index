@@ -1,6 +1,6 @@
 # Index
 
-![Version](https://img.shields.io/github/package-json/v/Eldynn/index/master.svg)
+![Version](https://img.shields.io/github/package-json/v/Eldynn/index.svg)
 ![License](https://img.shields.io/github/license/Eldynn/index.svg)
 [![devDependencies](https://david-dm.org/Eldynn/Index/dev-status.svg)](https://david-dm.org/Eldynn/Index?type=dev)
 
