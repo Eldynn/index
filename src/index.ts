@@ -4,11 +4,11 @@ import { GroupType, Id, MemberType } from './types';
 import { User } from './User';
 
 class Index {
-  private items: Map<Id, Identity>;
-
   public users: Set<User>;
 
   public groups: Set<Group>;
+
+  private items: Map<Id, Identity>;
 
   public constructor() {
     this.items = new Map<Id, Identity>();
@@ -46,10 +46,10 @@ class Index {
 }
 
 export default {
-  Index,
-  Identity,
-  User,
   Group,
   GroupType,
-  MemberType
+  Identity,
+  Index,
+  MemberType,
+  User
 };

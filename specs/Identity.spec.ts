@@ -3,8 +3,8 @@ import { User } from '../src/User';
 const configuration = {
   id: '62d2a85c-0c2e-4387-aa22-c455f35444f5',
   name: 'SuperName',
-  surname: 'SuperSurname',
-  phoneNumber: '+33 1 22 33 44 55'
+  phoneNumber: '+33 1 22 33 44 55',
+  surname: 'SuperSurname'
 };
 
 const userA = new User(
