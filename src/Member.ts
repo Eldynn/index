@@ -18,12 +18,12 @@ export class Member {
     this.group.add(this);
   }
 
+  public static build(user: User, type: MemberType, group: Group): Member {
+    return new Member(user, type, group);
+  }
+
   public destroy(): void {
     this.group.delete(this);
     this.user.delete(this);
-  }
-
-  public static build(user: User, type: MemberType, group: Group): Member {
-    return new Member(user, type, group);
   }
 }
