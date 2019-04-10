@@ -10,3 +10,8 @@ export enum GroupType {
   PERMANENT,
   TEMPORARY
 }
+
+export enum Status {
+  ONLINE,
+  OFFLINE
+}
