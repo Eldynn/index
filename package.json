@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage --colors --bail --expand",
     "test-watch": "npm test -- --watch",
-    "send-coverage": "npm test && codacy-coverage > ./coverage/lcov.info",
+    "send-coverage": "npm test && codacy-coverage < ./coverage/lcov.info",
     "build": "rollup --config",
     "build-watch": "npm run build -- --watch",
     "docs": "tplant --input src/index.ts > docs/index.puml"
