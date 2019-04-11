@@ -1,8 +1,8 @@
-import { Identity } from './Identity';
 import { Member } from './Member';
+import { Identity } from './Identity';
 
 export abstract class HaveMembers extends Identity {
-  public members: Set<Member> = new Set<Member>();
+  private readonly members: Set<Member> = new Set<Member>();
 
   public add(member: Member): void {
     this.members.add(member);
@@ -14,5 +14,14 @@ export abstract class HaveMembers extends Identity {
 
   public destroy(): void {
     this.members.forEach((member): void => member.destroy());
+    this.members.clear();
+  }
+
+  public get size(): number {
+    return this.members.size;
+  }
+
+  public has(member: Member): boolean {
+    return this.members.has(member);
   }
 }

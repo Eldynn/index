@@ -1,14 +1,14 @@
 import { Group } from './Group';
 import { Identity } from './Identity';
-import { GroupType, Id, MemberType } from './types';
+import { Id } from './types';
 import { User } from './User';
 
 class Index {
-  public users: Set<User>;
+  public readonly users: Set<User>;
 
-  public groups: Set<Group>;
+  public readonly groups: Set<Group>;
 
-  private items: Map<Id, Identity>;
+  private readonly items: Map<Id, Identity>;
 
   public constructor() {
     this.items = new Map<Id, Identity>();
@@ -47,9 +47,6 @@ class Index {
 
 export default {
   Group,
-  GroupType,
-  Identity,
   Index,
-  MemberType,
   User
 };

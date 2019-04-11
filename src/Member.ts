@@ -1,25 +1,21 @@
 import { Group } from './Group';
-import { MemberType } from './types';
 import { User } from './User';
 
 export class Member {
-  public user: User;
+  public readonly user: User;
 
-  public type: MemberType;
+  public readonly group: Group;
 
-  public group: Group;
-
-  public constructor(user: User, type: MemberType, group: Group) {
+  public constructor(user: User, group: Group) {
     this.user = user;
-    this.type = type;
     this.group = group;
 
     this.user.add(this);
     this.group.add(this);
   }
 
-  public static build(user: User, type: MemberType, group: Group): Member {
-    return new Member(user, type, group);
+  public static build(user: User, group: Group): Member {
+    return new Member(user, group);
   }
 
   public destroy(): void {

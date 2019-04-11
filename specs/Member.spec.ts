@@ -1,41 +1,41 @@
 import { User } from '../src/User';
 import { Group } from '../src/Group';
-import { GroupType, MemberType } from '../src/types';
+import { Member } from '../src/Member';
 
-const user = new User(
-  '62d2a85c-0c2e-4387-aa22-c455f35444f5',
-  'SuperNameA',
-  'SuperSurnameA',
-  '+33 1 22 33 44 55'
-);
-
-const group = new Group(
+const ids = [
   '00d2a85c-0c2e-4387-aa22-c455f35444f5',
-  'SuperNameGroup',
-  user,
-  GroupType.TEMPORARY
-);
+  '00d2a85c-0c2e-4387-aa22-c455f35444f6'
+];
 
 test('constructor', (): void => {
-  user.members.forEach(
-    (member): void => {
-      expect(member.user).toBe(user);
-      expect(member.type).toBe(MemberType.OWNER);
-      expect(member.group).toBe(group);
-    }
-  );
+  const user = new User(ids[0]);
+  const group = new Group(ids[1], user);
+  const member = new Member(user, group);
 
-  expect(user.members.size).toBe(1);
-  expect(group.members.size).toBe(1);
+  expect(member.user).toBe(user);
+  expect(member.group).toBe(group);
+  expect(member.user.has(member)).toBe(true);
+  expect(member.group.has(member)).toBe(true);
+});
+
+test('build', (): void => {
+  const user = new User(ids[0]);
+  const group = new Group(ids[1], user);
+  const member = Member.build(user, group);
+
+  expect(member.user).toBe(user);
+  expect(member.group).toBe(group);
+  expect(member.user.has(member)).toBe(true);
+  expect(member.group.has(member)).toBe(true);
 });
 
 test('destroy', (): void => {
-  user.members.forEach(
-    (member): void => {
-      member.destroy();
-    }
-  );
+  const user = new User(ids[0]);
+  const group = new Group(ids[1], user);
+  const member = Member.build(user, group);
 
-  expect(user.members.size).toBe(0);
-  expect(group.members.size).toBe(0);
+  member.destroy();
+
+  expect(member.user.has(member)).toBe(false);
+  expect(member.group.has(member)).toBe(false);
 });

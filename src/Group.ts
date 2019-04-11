@@ -1,26 +1,16 @@
 import { HaveMembers } from './HaveMembers';
 import { Member } from './Member';
-import { GroupType, MemberType } from './types';
+import { Id } from './types';
 import { User } from './User';
 
 export class Group extends HaveMembers {
-  private owner: User;
+  public readonly owner: User;
 
-  private type: GroupType;
-
-  public constructor(
-    id: string,
-    name: string,
-    owner: User,
-    type: GroupType,
-    surname?: string,
-    phoneNumber?: string
-  ) {
-    super(id, name, surname, phoneNumber);
+  public constructor(id: Id, owner: User) {
+    super(id);
 
     this.owner = owner;
-    this.type = type;
 
-    Member.build(owner, MemberType.OWNER, this);
+    Member.build(owner, this);
   }
 }
