@@ -1,8 +1,8 @@
 {
-  "name": "index",
+  "name": "@eldynn/index",
   "version": "0.0.1",
   "description": "SEE DESCRIPTION IN README.md",
-  "main": "./src/index.ts",
+  "main": "./build/index.js",
   "scripts": {
     "test": "jest --coverage --colors --bail --expand",
     "test-watch": "npm test -- --watch",
