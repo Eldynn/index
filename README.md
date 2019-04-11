@@ -16,13 +16,15 @@ A simple library to handle a directory of users and groups.
 
 ## [Documentation](https://eldynn.github.io/index/)
 
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Eldynn/index/master/docs/index.puml?version=0.0.1)
+
 ## Quick start
 
 Use `npm run build`, the output is located in build/
 
 Use `npm test` to run the test suite
 
-Use `npm run docs` to generate class diagram in docs/index.puml
+Use `npm run docs` to generate the documentation in docs/
 
 ## How to use
 
