@@ -27,7 +27,7 @@
     "url": "https://github.com/Eldynn/index/issues"
   },
   "files": [
-    "./build/index.js"
+    "/build/index.js"
   ],
   "homepage": "https://github.com/Eldynn/index#readme",
   "devDependencies": {
