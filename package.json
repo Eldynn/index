@@ -62,6 +62,39 @@
   "prettier": {
     "singleQuote": true
   },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier",
+      "import",
+      "jest"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint",
+      "plugin:jest/recommended"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ],
+      "import/prefer-default-export": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {}
+      }
+    },
+    "env": {
+      "jest/globals": true
+    }
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
