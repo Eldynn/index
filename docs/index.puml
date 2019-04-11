@@ -1,0 +1,32 @@
+@startuml
+class User extends HaveMembers {
+}
+class Member {
+    +user: User
+    +group: Group
+    +destroy(): void
+    +{static} build(user: User, group: Group): Member
+}
+abstract class Identity {
+    +id: string
+}
+abstract class HaveMembers extends Identity {
+    -members: Set<Member>
+    +add(member: Member): void
+    +delete(member: Member): void
+    +destroy(): void
+    +size: number
+    +has(member: Member): boolean
+}
+class Group extends HaveMembers {
+    +owner: User
+}
+class Index {
+    +users: Set<User>
+    +groups: Set<Group>
+    -items: Map<string, Identity>
+    +add(identity: Identity): Index
+    +delete(identity: Identity): Index
+    +get(id: string): Identity
+}
+@enduml
