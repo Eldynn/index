@@ -91,17 +91,17 @@ test('destroy', (): void => {
 
   expect(test.size).toBe(1);
   expect(test.has(member)).toBe(true);
-  expect(user.size).toBe(2);
+  expect(user.size).toBe(1);
   expect(user.has(member)).toBe(true);
-  expect(group.size).toBe(2);
+  expect(group.size).toBe(1);
   expect(group.has(member)).toBe(true);
 
   test.destroy();
 
   expect(test.size).toBe(0);
   expect(test.has(member)).toBe(false);
-  expect(user.size).toBe(1);
+  expect(user.size).toBe(0);
   expect(user.has(member)).toBe(false);
-  expect(group.size).toBe(1);
+  expect(group.size).toBe(0);
   expect(group.has(member)).toBe(false);
 });

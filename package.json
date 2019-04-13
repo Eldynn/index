@@ -4,7 +4,7 @@
   "description": "A simple library to handle a directory of users and groups.",
   "main": "./build/index.js",
   "scripts": {
-    "test": "jest --coverage --colors --bail --expand",
+    "test": "npm run build && jest --coverage --colors --bail --expand",
     "test-watch": "npm test -- --watch",
     "send-coverage": "npm test && codacy-coverage < ./coverage/lcov.info",
     "build": "rollup --config",
@@ -120,7 +120,10 @@
   },
   "jest": {
     "preset": "ts-jest",
-    "testRegex": "/specs/.*\\.spec\\.ts$",
+    "testRegex": [
+      "/tests/.*\\.test\\.ts$",
+      "/specs/.*\\.spec\\.ts$"
+    ],
     "moduleFileExtensions": [
       "js",
       "ts"

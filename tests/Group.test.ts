@@ -11,6 +11,5 @@ test('constructor', (): void => {
   const group = new Group(ids[1], user);
 
   expect(group.owner).toBe(user);
-  expect(group.owner.size).toBe(1);
-  expect(group.size).toBe(1);
+  expect(group.owner.size).toBe(0);
 });
