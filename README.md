@@ -22,7 +22,7 @@ A simple library to handle a directory of users and groups.
 
 Use `npm run build`, the output is located in build/
 
-Use `npm test` to run the test suite
+Use `npm test` to run the test suites
 
 Use `npm run docs` to generate the documentation in docs/
 
@@ -37,3 +37,7 @@ Use `npm run docs` to generate the documentation in docs/
 ### In node environment
 
 `import Index from './build/index.js';`
+
+or
+
+`import Index from '@eldynn/index';`
