@@ -3,7 +3,7 @@ import { Identity } from './Identity';
 import { Id } from './types';
 import { User } from './User';
 
-class Index {
+export class Index {
   public readonly users: Set<User>;
 
   public readonly groups: Set<Group>;
@@ -45,8 +45,7 @@ class Index {
   }
 }
 
-export default {
-  Group,
-  Index,
-  User
-};
+export { Group } from './Group';
+export { User } from './User';
+export { Profile } from './Profile';
+export { Member } from './Member';
