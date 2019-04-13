@@ -18,10 +18,16 @@ export class Member {
     this.group.add(this);
   }
 
+  /**
+   * Build a member the same way of the constructor.
+   */
   public static build(user: User, group: Group, profile?: Profile): Member {
     return new Member(user, group, profile);
   }
 
+  /**
+   * Destroy this member, and delete it from the group and the user is in.
+   */
   public destroy(): void {
     this.group.delete(this);
     this.user.delete(this);

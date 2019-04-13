@@ -16,6 +16,9 @@ export class Index {
     this.groups = new Set<Group>();
   }
 
+  /**
+   * Add a [[Group]] or an [[User]] to this [[Index]]
+   */
   public add(identity: Identity): Index {
     this.items.set(identity.id, identity);
 
@@ -28,6 +31,9 @@ export class Index {
     return this;
   }
 
+  /**
+   * Delete a [[Group]] or an [[User]] of this [[Index]]
+   */
   public delete(identity: Identity): Index {
     this.items.delete(identity.id);
 
@@ -40,6 +46,9 @@ export class Index {
     return this;
   }
 
+  /**
+   * Get a [[Group]] or an [[User]] of this [[Index]]
+   */
   public get(id: Id): Identity {
     return this.items.get(id);
   }
