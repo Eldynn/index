@@ -42,7 +42,9 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.4.1",
     "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
     "jest": "^24.7.1",
+    "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "rollup": "^1.9.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
@@ -102,7 +104,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
     }
   },
   "lint-staged": {
@@ -112,8 +115,7 @@
     ],
     "*.ts": [
       "eslint --fix",
-      "git add",
-      "npm run tests"
+      "git add"
     ]
   },
   "jest": {
