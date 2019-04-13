@@ -1,11 +1,15 @@
 @startuml
+class Profile {
+}
 class User extends HaveMembers {
+    +profile: Profile
 }
 class Member {
     +user: User
     +group: Group
+    +profile: Profile
     +destroy(): void
-    +{static} build(user: User, group: Group): Member
+    +{static} build(user: User, group: Group, profile?: Profile): Member
 }
 abstract class Identity {
     +id: string
@@ -20,6 +24,7 @@ abstract class HaveMembers extends Identity {
 }
 class Group extends HaveMembers {
     +owner: User
+    +profile: Profile
 }
 class Index {
     +users: Set<User>
@@ -29,4 +34,13 @@ class Index {
     +delete(identity: Identity): Index
     +get(id: string): Identity
 }
+
+Index o-- User
+Index o-- Group
+Member o-- Group
+Member o-- User
+HaveMembers *-- "many" Member
+Profile o---l User
+Profile o---l Group
+Profile o-- Member
 @enduml
