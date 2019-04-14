@@ -4,8 +4,6 @@ export default (Index, User, Group, Profile, Member): void => {
     groups: [
       {
         id: '10d2a85c-0c2e-4387-aa22-c455f35444f0',
-        name: 'Le groupe de Bob',
-        owner: '00d2a85c-0c2e-4387-aa22-c455f35444f0',
         members: [
           {
             id: '00d2a85c-0c2e-4387-aa22-c455f35444f0',
@@ -15,12 +13,12 @@ export default (Index, User, Group, Profile, Member): void => {
             id: '00d2a85c-0c2e-4387-aa22-c455f35444f1',
             type: 'permanent'
           }
-        ]
+        ],
+        name: 'Le groupe de Bob',
+        owner: '00d2a85c-0c2e-4387-aa22-c455f35444f0'
       },
       {
         id: '10d2a85c-0c2e-4387-aa22-c455f35444f1',
-        name: 'Le groupe de Thomas',
-        owner: '00d2a85c-0c2e-4387-aa22-c455f35444f2',
         members: [
           {
             id: '00d2a85c-0c2e-4387-aa22-c455f35444f0',
@@ -30,7 +28,9 @@ export default (Index, User, Group, Profile, Member): void => {
             id: '00d2a85c-0c2e-4387-aa22-c455f35444f2',
             type: 'owner'
           }
-        ]
+        ],
+        name: 'Le groupe de Thomas',
+        owner: '00d2a85c-0c2e-4387-aa22-c455f35444f2'
       }
     ],
     users: [
