@@ -3,6 +3,7 @@
 [![Top Language](https://img.shields.io/github/languages/top/Eldynn/index.svg)](https://github.com/Eldynn/index/blob/master/tsconfig.json)
 [![License](https://img.shields.io/github/license/Eldynn/index.svg)](https://github.com/Eldynn/index/blob/master/LICENSE)
 [![devDependencies](https://david-dm.org/Eldynn/Index/dev-status.svg)](https://david-dm.org/Eldynn/Index?type=dev)
+[![Greenkeeper](https://badges.greenkeeper.io/Eldynn/index.svg)](https://greenkeeper.io/)
 [![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/Eldynn/index/blob/master/package.json)
 
 [![Version](https://img.shields.io/github/package-json/v/Eldynn/index.svg)](https://www.npmjs.com/package/@eldynn/index)
