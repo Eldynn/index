@@ -4,16 +4,16 @@ import { Id } from './types';
 import { User } from './User';
 
 export class Index {
-  public readonly users: Set<User>;
+  public readonly users: Map<Id, User>;
 
-  public readonly groups: Set<Group>;
+  public readonly groups: Map<Id, Group>;
 
   private readonly items: Map<Id, Identity>;
 
   public constructor() {
     this.items = new Map<Id, Identity>();
-    this.users = new Set<User>();
-    this.groups = new Set<Group>();
+    this.users = new Map<Id, User>();
+    this.groups = new Map<Id, Group>();
   }
 
   /**
@@ -23,9 +23,9 @@ export class Index {
     this.items.set(identity.id, identity);
 
     if (identity instanceof User) {
-      this.users.add(identity);
+      this.users.set(identity.id, identity);
     } else if (identity instanceof Group) {
-      this.groups.add(identity);
+      this.groups.set(identity.id, identity);
     }
 
     return this;
@@ -38,9 +38,9 @@ export class Index {
     this.items.delete(identity.id);
 
     if (identity instanceof User) {
-      this.users.delete(identity);
+      this.users.delete(identity.id);
     } else if (identity instanceof Group) {
-      this.groups.delete(identity);
+      this.groups.delete(identity.id);
     }
 
     return this;

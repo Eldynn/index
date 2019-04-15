@@ -1,21 +1,22 @@
 import { Member } from './Member';
 import { Identity } from './Identity';
+import { Id } from './types';
 
 export abstract class HaveMembers extends Identity {
-  private readonly members: Set<Member> = new Set<Member>();
+  private readonly members: Map<Id, Member> = new Map<Id, Member>();
 
   /**
    * Add a member.
    */
   public add(member: Member): void {
-    this.members.add(member);
+    this.members.set(member.user.id, member);
   }
 
   /**
    * Delete a member.
    */
   public delete(member: Member): void {
-    this.members.delete(member);
+    this.members.delete(member.user.id);
   }
 
   /**
@@ -37,6 +38,13 @@ export abstract class HaveMembers extends Identity {
    * Is this have a member.
    */
   public has(member: Member): boolean {
-    return this.members.has(member);
+    return this.members.has(member.user.id);
+  }
+
+  /**
+   * Return the member with theid specified.
+   */
+  public get(id: Id): Member {
+    return this.members.get(id);
   }
 }
