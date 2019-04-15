@@ -37,8 +37,8 @@ Use `npm run docs` to generate the documentation in docs/
 
 ### In node environment
 
-`import Index from './build/index.js';`
+`import { Index, User, Group, Member, Profile } from './build/index.js';`
 
 or
 
-`import Index from '@eldynn/index';`
+`import { Index, User, Group, Member, Profile } from '@eldynn/index';`
