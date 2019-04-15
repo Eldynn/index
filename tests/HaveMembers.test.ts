@@ -105,3 +105,17 @@ test('destroy', (): void => {
   expect(group.size).toBe(0);
   expect(group.has(member)).toBe(false);
 });
+
+test('add member with the same identity', (): void => {
+  const test = new Test(ids[0]);
+  const user = new User(ids[1]);
+  const group = new Group(ids[2], user);
+  const memberA = new Member(user, group);
+  const memberB = new Member(user, group);
+
+  test.add(memberA);
+  test.add(memberB);
+
+  expect(test.has(memberA)).toBe(true);
+  expect(test.get(memberB.user.id)).toBe(memberB);
+});

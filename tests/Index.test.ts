@@ -65,3 +65,28 @@ test('delete Group', (): void => {
 
   expect(index.get(group.id)).toBeUndefined();
 });
+
+test('add User with the same identity', (): void => {
+  const index = new Index();
+  const userA = new User(ids[0]);
+  const userB = new User(ids[0]);
+
+  index.add(userA);
+  index.add(userB);
+
+  expect(index.users.size).toBe(1);
+  expect(index.get(ids[0])).toBe(userB);
+});
+
+test('add Group with the same identity', (): void => {
+  const index = new Index();
+  const user = new User(ids[0]);
+  const groupA = new Group(ids[1], user);
+  const groupB = new Group(ids[1], user);
+
+  index.add(groupA);
+  index.add(groupB);
+
+  expect(index.groups.size).toBe(1);
+  expect(index.get(ids[1])).toBe(groupB);
+});
