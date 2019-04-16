@@ -3,8 +3,9 @@ import { Member } from './Member';
 import { Profile } from './Profile';
 import { Id } from './types';
 import { User } from './User';
+import { Identity } from './Identity';
 
-export class Group extends HaveMembers {
+export class Group extends HaveMembers(Identity) {
   public readonly owner: User;
 
   public readonly profile: Profile;

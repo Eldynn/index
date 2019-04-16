@@ -2,8 +2,9 @@ import { Group } from '../src/Group';
 import { HaveMembers } from '../src/HaveMembers';
 import { Member } from '../src/Member';
 import { User } from '../src/User';
+import { Identity } from '../src/Identity';
 
-class Test extends HaveMembers {}
+class Test extends HaveMembers(Identity) {}
 
 const ids = [
   '00d2a85c-0c2e-4387-aa22-c455f35444f5',
