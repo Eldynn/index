@@ -23,8 +23,16 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm run send-coverage
+      - run:
+          command: npm run send-coverage
+          environment:
+            JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
 
       - run: npm run docs
 
       - run: npx semantic-release
+
+      - store_test_results:
+          path: reports/junit
+      - store_artifacts:
+          path: reports/junit
