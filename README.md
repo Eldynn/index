@@ -31,7 +31,7 @@ Extract the [latest release](https://github.com/Eldynn/index/releases/latest).
 
 ## [Documentation](https://eldynn.github.io/index/)
 
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Eldynn/index/master/docs/index.puml?version=0.0.4)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Eldynn/index/master/docs/index.puml?version=1.0.0)
 
 ## Contribute
 
