@@ -1,11 +1,12 @@
 @startuml
-Index o-- User
-Index o-- Group
-User o-- Profile
-Group o-- Profile
-Member o-- Profile
-
+User *-- "1" Profile
+User *-- "1" Identity
+Group *-- "1" Profile
+Group *-- "1" Identity
+HaveMembers *-- "many" Member
+Member *-- "1" Profile
 Member o-- Group
 Member o-- User
-HaveMembers *-- "many" Member
+Index *-- "many" User
+Index *-- "many" Group
 @enduml
