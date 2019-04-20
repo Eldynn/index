@@ -15,30 +15,30 @@
 
 A simple library to handle a directory of users and groups.
 
+## Usage
+
+### In browser environment
+
+Extract the [latest release](https://github.com/Eldynn/index/releases/latest).
+
+`<script type="text/javascript" src="Index/index.js"></script>`
+
+### In node environment
+
+`npm install @eldynn/index`
+
+`import { Index, User, Group, Member, Profile } from '@eldynn/index';`
+
 ## [Documentation](https://eldynn.github.io/index/)
 
 ![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/Eldynn/index/master/docs/index.puml?version=0.0.4)
 
-## Quick start
+## Contribute
+
+If you want to contribute read [this guide](https://github.com/Eldynn/index/blob/master/CONTRIBUTING.md).
 
 Use `npm run build`, the output is located in build/
 
 Use `npm test` to run the test suites
 
 Use `npm run docs` to generate the documentation in docs/
-
-## How to use
-
-`npm install @eldynn/index`
-
-### In browser environment
-
-`<script type="text/javascript" src="./build/index.js"></script>`
-
-### In node environment
-
-`import { Index, User, Group, Member, Profile } from './build/index.js';`
-
-or
-
-`import { Index, User, Group, Member, Profile } from '@eldynn/index';`
