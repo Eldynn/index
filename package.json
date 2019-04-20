@@ -9,7 +9,7 @@
     "send-coverage": "npm test && codacy-coverage < ./coverage/lcov.info",
     "build": "rollup --config",
     "build-watch": "npm run build -- --watch",
-    "docs": "typedoc --module \"commonjs\" --out docs src/ && tplant --input src/index.ts > docs/index.puml"
+    "docs": "typedoc --module \"commonjs\" --out docs src/ && tplant --input src/index.ts > docs/index.puml && .\\scripts\\docs.sh"
   },
   "repository": {
     "type": "git",
