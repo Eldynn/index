@@ -15,5 +15,7 @@ import {
 
 import Index from './Index';
 
-Index(SrcIndex, SrcUser, SrcGroup, SrcProfile, SrcMember);
-Index(BuildIndex, BuildUser, BuildGroup, BuildProfile, BuildMember);
+describe('specs from src', (): void =>
+  Index(SrcIndex, SrcUser, SrcGroup, SrcProfile, SrcMember));
+describe('specs from build', (): void =>
+  Index(BuildIndex, BuildUser, BuildGroup, BuildProfile, BuildMember));

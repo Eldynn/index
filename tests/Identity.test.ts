@@ -4,8 +4,10 @@ class Test extends Identity {}
 
 const id = '00d2a85c-0c2e-4387-aa22-c455f35444f5';
 
-test('id', (): void => {
-  const test = new Test(id);
+describe('Identity', (): void => {
+  test('id', (): void => {
+    const test = new Test(id);
 
-  expect(test.id).toBe(id);
+    expect(test.id).toBe(id);
+  });
 });
