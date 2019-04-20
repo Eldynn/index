@@ -9,7 +9,7 @@
     "send-coverage": "npm test && codacy-coverage < ./coverage/lcov.info",
     "build": "rollup --config",
     "build-watch": "npm run build -- --watch",
-    "docs": "typedoc --module \"commonjs\" --out docs src/ && tplant --input src/index.ts > docs/index.puml && .\\scripts\\docs.sh"
+    "docs": "typedoc --module \"commonjs\" --out docs src/ && tplant --input src/index.ts > docs/index.puml && bash ./scripts/docs.sh"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "@typescript-eslint/parser": "^1.6.0",
     "codacy-coverage": "^3.4.0",
     "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -142,5 +143,10 @@
       "html",
       "lcov"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
