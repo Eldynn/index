@@ -2,22 +2,22 @@ import { Member } from './Member';
 import { Id, Constructor } from './types';
 
 interface HaveMembers {
+  size: number;
+  
   add(member: Member): void;
 
   delete(member: Member): void;
 
   destroy(): void;
 
-  size: number;
-
   has(member: Member): boolean;
 
   get(id: Id): Member;
 }
 
-function HaveMembers<T extends Constructor<{}>>(
+const HaveMembers = <T extends Constructor<{}>>(
   Base: T
-): Constructor<HaveMembers> & T {
+): Constructor<HaveMembers> & T => {
   return class extends Base {
     private readonly members: Map<Id, Member>;
 
