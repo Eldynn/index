@@ -7,7 +7,7 @@
     "test": "npm run build && jest --coverage --colors --bail --expand",
     "test-ci": "npm test -- --ci --runInBand --reporters=default --reporters=jest-junit",
     "test-watch": "npm test -- --watch",
-    "send-coverage": "npm test && codacy-coverage < ./coverage/lcov.info",
+    "send-coverage": "npm run test-ci && codacy-coverage < ./coverage/lcov.info",
     "build": "rollup --config",
     "build-watch": "npm run build -- --watch",
     "docs": "typedoc --module \"commonjs\" --out docs src/ && tplant --input src/index.ts > docs/index.puml && bash ./scripts/docs.sh"
