@@ -26,7 +26,7 @@ jobs:
       - run:
           command: npm run send-coverage
           environment:
-            JEST_JUNIT_OUTPUT: 'reports/junit/js-test-results.xml'
+            JEST_JUNIT_OUTPUT: 'reports/junit/tests/test-results.xml'
 
       - run: npm run docs
 
