@@ -1,0 +1,11 @@
+@startuml
+Index o-- User
+Index o-- Group
+User o-- Profile
+Group o-- Profile
+Member o-- Profile
+
+Member o-- Group
+Member o-- User
+HaveMembers *-- "many" Member
+@enduml
