@@ -3,7 +3,7 @@ import { Id, Constructor } from './types';
 
 interface HaveMembers {
   size: number;
-  
+
   add(member: Member): void;
 
   delete(member: Member): void;
@@ -71,6 +71,6 @@ const HaveMembers = <T extends Constructor<{}>>(
       return this.members.get(id);
     }
   };
-}
+};
 
 export { HaveMembers };
