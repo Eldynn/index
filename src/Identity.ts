@@ -1,5 +1,4 @@
 import { Id } from './types';
-import { Profile } from './Profile';
 
 export class Identity {
   public readonly id: Id;

@@ -1,6 +1,6 @@
 import { Group } from './Group';
-import { User } from './User';
 import { Profile } from './Profile';
+import { User } from './User';
 
 export class Member {
   public readonly user: User;

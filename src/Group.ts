@@ -1,9 +1,8 @@
 import { HaveMembers } from './HaveMembers';
-import { Member } from './Member';
+import { Identity } from './Identity';
 import { Profile } from './Profile';
 import { Id } from './types';
 import { User } from './User';
-import { Identity } from './Identity';
 
 export class Group extends HaveMembers(Identity) {
   public readonly owner: User;
