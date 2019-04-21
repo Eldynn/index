@@ -1,10 +1,11 @@
 import { Group } from '../src/Group';
-import { HaveMembers } from '../src/HaveMembers';
+import { HaveMember } from '../src/HaveMember';
 import { Member } from '../src/Member';
 import { User } from '../src/User';
 import { Identity } from '../src/Identity';
+import { HaveEvent } from '../src/HaveEvent';
 
-class Test extends HaveMembers(Identity) {}
+class Test extends HaveMember(HaveEvent(Identity)) {}
 
 const ids = [
   '00d2a85c-0c2e-4387-aa22-c455f35444f5',
@@ -12,7 +13,7 @@ const ids = [
   '00d2a85c-0c2e-4387-aa22-c455f35444f7'
 ];
 
-describe('HaveMembers', (): void => {
+describe('HaveMember', (): void => {
   test('size', (): void => {
     const test = new Test(ids[0]);
     const user = new User(ids[1]);
