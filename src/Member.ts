@@ -1,9 +1,17 @@
 import { Group } from './Group';
 import { HaveEvent } from './HaveEvent';
 import { Profile } from './Profile';
+import { Empty } from './types';
 import { User } from './User';
 
-export class Member extends HaveEvent(class {}) implements HaveEvent {
+export class Member extends HaveEvent(Empty) implements HaveEvent {
+  public static readonly events: string[] = [
+    'prebuild',
+    'postbuild',
+    'predestroy',
+    'postdestroy'
+  ];
+
   public readonly user: User;
 
   public readonly group: Group;
@@ -24,13 +32,6 @@ export class Member extends HaveEvent(class {}) implements HaveEvent {
 
     this.emit('postbuild', { build: this });
   }
-
-  public static readonly events: string[] = [
-    'prebuild',
-    'postbuild',
-    'predestroy',
-    'postdestroy'
-  ];
 
   /**
    * Build a member the same way of the constructor.

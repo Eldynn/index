@@ -22,15 +22,6 @@ const HaveMember = <T extends Constructor<{} & HaveEvent>>(
   Base: T
 ): Constructor<HaveMember> & T => {
   return class extends Base implements HaveMember, HaveEvent {
-    private readonly members: Map<Id, Member>;
-
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    public constructor(...args: any[]) {
-      super(...args);
-
-      this.members = new Map<Id, Member>();
-    }
-
     public static readonly events: string[] = [
       'preadd',
       'postadd',
@@ -39,6 +30,15 @@ const HaveMember = <T extends Constructor<{} & HaveEvent>>(
       'predestroy',
       'postdestroy'
     ];
+
+    private readonly members: Map<Id, Member>;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    public constructor(...args: any[]) {
+      super(...args);
+
+      this.members = new Map<Id, Member>();
+    }
 
     /**
      * Add a member.
