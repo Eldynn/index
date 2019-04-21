@@ -1,20 +1,33 @@
 @startuml
+class Handler {
+    +save: {}
+    +callback: (save: {}, result: {}) => void
+    +fire(result: {}): void
+}
+
+interface HaveEvent {
+    +events: string[]
+    +on(event: string, callback: (save: {}, result: {}): HaveEvent
+    +emit(event: string, data?: {}): HaveEvent
+}
 class Profile {
 }
 class Identity {
     +id: string
 }
-class User implements HaveMembers {
+class User implements HaveMember {
     +profile: Profile
 }
-class Member {
+class Member implements HaveEvent {
     +user: User
     +group: Group
     +profile: Profile
     +destroy(): void
+    +{static} events: string[]
     +{static} build(user: User, group: Group, profile?: Profile): Member
 }
-interface HaveMembers {
+interface HaveMember {
+    +events: {}
     +size: number
     +add(member: Member): void
     +delete(member: Member): void
@@ -22,7 +35,7 @@ interface HaveMembers {
     +has(member: Member): boolean
     +get(id: string): Member
 }
-class Group implements HaveMembers {
+class Group implements HaveMember {
     +owner: User
     +profile: Profile
 }
@@ -35,13 +48,16 @@ class Index {
     +get(id: string): Identity
 }
 
-Index o-- User
-Index o-- Group
-User o-- Profile
-Group o-- Profile
-Member o-- Profile
-
+User *-- "1" Profile
+User *-- "1" Identity
+Group *-- "1" Profile
+Group *-- "1" Identity
+HaveMember *-- "many" Member
+HaveMember ..|> HaveEvent
+Member *-- "1" Profile
 Member o-- Group
 Member o-- User
-HaveMembers *-- "many" Member
+Index *-- "many" User
+Index *-- "many" Group
+HaveEvent *-- "many" Handler
 @enduml

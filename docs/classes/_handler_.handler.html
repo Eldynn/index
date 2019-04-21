@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Member | @eldynn/index</title>
+	<title>Handler | @eldynn/index</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_member_.html">&quot;Member&quot;</a>
+					<a href="../modules/_handler_.html">&quot;Handler&quot;</a>
 				</li>
 				<li>
-					<a href="_member_.member.html">Member</a>
+					<a href="_handler_.handler.html">Handler</a>
 				</li>
 			</ul>
-			<h1>Class Member</h1>
+			<h1>Class Handler</h1>
 		</div>
 	</div>
 </header>
@@ -73,21 +73,8 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="../modules/_haveevent_.html#haveevent" class="tsd-signature-type">HaveEvent</a>
-						<span class="tsd-signature-symbol"> &amp; </span>
-						<a href="_types_.empty.html" class="tsd-signature-type">Empty</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">this</span><span class="tsd-signature-symbol">&gt;</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">Member</span>
-							</li>
-						</ul>
+						<span class="target">Handler</span>
 					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel">
-				<h3>Implements</h3>
-				<ul class="tsd-hierarchy">
-					<li><a href="../modules/_haveevent_.html#haveevent" class="tsd-signature-type">HaveEvent</a></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -97,23 +84,20 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_member_.member.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_handler_.handler.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_member_.member.html#group" class="tsd-kind-icon">group</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_member_.member.html#profile" class="tsd-kind-icon">profile</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_member_.member.html#user" class="tsd-kind-icon">user</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_member_.member.html#events" class="tsd-kind-icon">events</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_handler_.handler.html#callback" class="tsd-kind-icon">callback</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_handler_.handler.html#save" class="tsd-kind-icon">save</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_member_.member.html#destroy" class="tsd-kind-icon">destroy</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_member_.member.html#build" class="tsd-kind-icon">build</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_handler_.handler.html#fire" class="tsd-kind-icon">fire</a></li>
 							</ul>
 						</section>
 					</div>
@@ -125,28 +109,46 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Member<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="_user_.user.html" class="tsd-signature-type">User</a>, group<span class="tsd-signature-symbol">: </span><a href="_group_.group.html" class="tsd-signature-type">Group</a>, profile<span class="tsd-signature-symbol">?: </span><a href="_profile_.profile.html" class="tsd-signature-type">Profile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_member_.member.html" class="tsd-signature-type">Member</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Handler<span class="tsd-signature-symbol">(</span>save<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_handler_.handler.html" class="tsd-signature-type">Handler</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L19">Member.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Handler.ts#L4">Handler.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>user: <a href="_user_.user.html" class="tsd-signature-type">User</a></h5>
+									<h5>save: <span class="tsd-signature-type">__type</span></h5>
 								</li>
 								<li>
-									<h5>group: <a href="_group_.group.html" class="tsd-signature-type">Group</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> profile: <a href="_profile_.profile.html" class="tsd-signature-type">Profile</a></h5>
+									<h5>callback: <span class="tsd-signature-type">function</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>save<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>save: <span class="tsd-signature-type">__type</span></h5>
+														</li>
+														<li>
+															<h5>result: <span class="tsd-signature-type">__type</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_member_.member.html" class="tsd-signature-type">Member</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_handler_.handler.html" class="tsd-signature-type">Handler</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -154,42 +156,46 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="group" class="tsd-anchor"></a>
-					<h3>group</h3>
-					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <a href="_group_.group.html" class="tsd-signature-type">Group</a></div>
+					<a name="callback" class="tsd-anchor"></a>
+					<h3>callback</h3>
+					<div class="tsd-signature tsd-kind-icon">callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L17">Member.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Handler.ts#L4">Handler.ts:4</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>save<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>save: <span class="tsd-signature-type">__type</span></h5>
+											</li>
+											<li>
+												<h5>result: <span class="tsd-signature-type">__type</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="profile" class="tsd-anchor"></a>
-					<h3>profile</h3>
-					<div class="tsd-signature tsd-kind-icon">profile<span class="tsd-signature-symbol">:</span> <a href="_profile_.profile.html" class="tsd-signature-type">Profile</a></div>
+					<a name="save" class="tsd-anchor"></a>
+					<h3>save</h3>
+					<div class="tsd-signature tsd-kind-icon">save<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">__type</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L19">Member.ts:19</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="user" class="tsd-anchor"></a>
-					<h3>user</h3>
-					<div class="tsd-signature tsd-kind-icon">user<span class="tsd-signature-symbol">:</span> <a href="_user_.user.html" class="tsd-signature-type">User</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L15">Member.ts:15</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="events" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> events</h3>
-					<div class="tsd-signature tsd-kind-icon">events<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;prebuild&#x27;,&#x27;postbuild&#x27;,&#x27;predestroy&#x27;,&#x27;postdestroy&#x27;]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L8">Member.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Handler.ts#L2">Handler.ts:2</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,58 +203,25 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="destroy" class="tsd-anchor"></a>
-					<h3>destroy</h3>
+					<a name="fire" class="tsd-anchor"></a>
+					<h3>fire</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">destroy<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">fire<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L46">Member.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Handler.ts#L11">Handler.ts:11</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Destroy this member, and delete it from the group and the user is in.</p>
-								</div>
-							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="build" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> build</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">build<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="_user_.user.html" class="tsd-signature-type">User</a>, group<span class="tsd-signature-symbol">: </span><a href="_group_.group.html" class="tsd-signature-type">Group</a>, profile<span class="tsd-signature-symbol">?: </span><a href="_profile_.profile.html" class="tsd-signature-type">Profile</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_member_.member.html" class="tsd-signature-type">Member</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/Eldynn/index/blob/4436f64/src/Member.ts#L39">Member.ts:39</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Build a member the same way of the constructor.</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>user: <a href="_user_.user.html" class="tsd-signature-type">User</a></h5>
-								</li>
-								<li>
-									<h5>group: <a href="_group_.group.html" class="tsd-signature-type">Group</a></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> profile: <a href="_profile_.profile.html" class="tsd-signature-type">Profile</a></h5>
+									<h5>result: <span class="tsd-signature-type">__type</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_member_.member.html" class="tsd-signature-type">Member</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -263,7 +236,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_group_.html">"<wbr>Group"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_handler_.html">"<wbr>Handler"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -275,7 +248,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_identity_.html">"<wbr>Identity"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_member_.html">"<wbr>Member"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -297,28 +270,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-external-module">
-						<a href="_member_.member.html" class="tsd-kind-icon">Member</a>
+						<a href="_handler_.handler.html" class="tsd-kind-icon">Handler</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="_member_.member.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="_handler_.handler.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_member_.member.html#group" class="tsd-kind-icon">group</a>
+								<a href="_handler_.handler.html#callback" class="tsd-kind-icon">callback</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_member_.member.html#profile" class="tsd-kind-icon">profile</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="_member_.member.html#user" class="tsd-kind-icon">user</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="_member_.member.html#events" class="tsd-kind-icon">events</a>
+								<a href="_handler_.handler.html#save" class="tsd-kind-icon">save</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="_member_.member.html#destroy" class="tsd-kind-icon">destroy</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="_member_.member.html#build" class="tsd-kind-icon">build</a>
+								<a href="_handler_.handler.html#fire" class="tsd-kind-icon">fire</a>
 							</li>
 						</ul>
 					</li>
