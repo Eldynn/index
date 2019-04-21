@@ -4,13 +4,17 @@
   "description": "A simple library to handle a directory of users and groups.",
   "main": "./build/index.js",
   "scripts": {
-    "test": "npm run build && jest --coverage --colors --bail --expand",
-    "test-ci": "npm test -- --ci --runInBand --reporters=default --reporters=jest-junit",
-    "test-watch": "npm test -- --watch",
-    "send-coverage": "npm run test-ci && codacy-coverage < ./coverage/lcov.info",
+    "pretest": "npm run build",
+    "test": "jest --coverage --colors --bail --expand",
+    "test:ci": "npm test -- --ci --runInBand --reporters=default --reporters=jest-junit",
+    "test:watch": "npm test -- --watch",
+    "precodacy:ci": "npm run test:ci",
+    "codacy:ci": "codacy-coverage < ./coverage/lcov.info",
     "build": "rollup --config",
-    "build-watch": "npm run build -- --watch",
-    "docs": "typedoc --module \"commonjs\" --out docs src/ && tplant --input src/index.ts > docs/index.puml && bash ./scripts/docs.sh"
+    "build:watch": "npm run build -- --watch",
+    "predocs": "typedoc --module \"commonjs\" --out docs src/",
+    "docs": "tplant --input src/index.ts > docs/index.puml",
+    "postdocs": "bash ./scripts/docs.sh"
   },
   "repository": {
     "type": "git",

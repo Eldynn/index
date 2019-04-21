@@ -24,7 +24,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-          command: npm run send-coverage
+          command: npm run codacy:ci
           environment:
             JEST_JUNIT_OUTPUT: 'reports/junit/tests/test-results.xml'
 
