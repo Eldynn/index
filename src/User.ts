@@ -1,9 +1,11 @@
-import { HaveMembers } from './HaveMembers';
+import { HaveEvent } from './HaveEvent';
+import { HaveMember } from './HaveMember';
+import { Identity } from './Identity';
 import { Profile } from './Profile';
 import { Id } from './types';
-import { Identity } from './Identity';
 
-export class User extends HaveMembers(Identity) implements HaveMembers {
+export class User extends HaveMember(HaveEvent(Identity))
+  implements HaveMember {
   public readonly profile: Profile;
 
   public constructor(id: Id, profile?: Profile) {

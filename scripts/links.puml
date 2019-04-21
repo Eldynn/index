@@ -3,10 +3,12 @@ User *-- "1" Profile
 User *-- "1" Identity
 Group *-- "1" Profile
 Group *-- "1" Identity
-HaveMembers *-- "many" Member
+HaveMember *-- "many" Member
+HaveMember ..|> HaveEvent
 Member *-- "1" Profile
 Member o-- Group
 Member o-- User
 Index *-- "many" User
 Index *-- "many" Group
+HaveEvent *-- "many" Handler
 @enduml
