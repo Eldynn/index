@@ -1,14 +1,21 @@
 import typescript from 'rollup-plugin-typescript2';
 import sourcemaps from 'rollup-plugin-sourcemaps';
-import { uglify } from 'rollup-plugin-uglify';
+import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: './src/index.ts',
-  plugins: [typescript(), sourcemaps(), uglify()],
-  output: {
-    file: './build/index.js',
-    name: 'Index',
-    format: 'umd',
-    sourcemap: true
-  }
+  plugins: [typescript(), sourcemaps(), terser()],
+  output: [
+    {
+      file: './build/umd/index.js',
+      format: 'umd',
+      name: 'Index',
+      sourcemap: true
+    },
+    {
+      file: './build/index.js',
+      format: 'esm',
+      sourcemap: true
+    }
+  ]
 };
