@@ -2,8 +2,9 @@
 
 [![Top Language](https://img.shields.io/github/languages/top/Eldynn/index.svg)](https://github.com/Eldynn/index/blob/master/tsconfig.json)
 [![License](https://img.shields.io/github/license/Eldynn/index.svg)](https://github.com/Eldynn/index/blob/master/LICENSE)
+![npm bundle size](https://img.shields.io/bundlephobia/min/@eldynn/index.svg)
 
-[![Version](https://img.shields.io/github/package-json/v/Eldynn/index.svg)](https://www.npmjs.com/package/@eldynn/index)
+[![Version](https://img.shields.io/npm/v/@eldynn/index.svg)](https://www.npmjs.com/package/@eldynn/index)
 [![CircleCI](https://circleci.com/gh/Eldynn/index.svg?style=svg)](https://circleci.com/gh/Eldynn/index)
 [![Code Quality](https://api.codacy.com/project/badge/Grade/cbf285d5983d4bdb8c1e726b54c7fcd7)](https://app.codacy.com/app/contact_115/index?utm_source=github.com&utm_medium=referral&utm_content=Eldynn/index&utm_campaign=Badge_Grade_Settings)
 [![Code Coverage](https://api.codacy.com/project/badge/Coverage/fe8538e1cc2e42748e6c634365d967dc)](https://www.codacy.com/app/contact_115/index?utm_source=github.com&utm_medium=referral&utm_content=Eldynn/index&utm_campaign=Badge_Coverage)
