@@ -19,11 +19,11 @@ class User implements HaveMember {
     +profile: Profile
 }
 class Member implements HaveEvent {
+    +events: string[]
     +user: User
     +group: Group
     +profile: Profile
     +destroy(): void
-    +{static} events: string[]
     +{static} build(user: User, group: Group, profile?: Profile): Member
 }
 interface HaveMember {
