@@ -3,8 +3,6 @@ import { Member } from './Member';
 import { Constructor, Id } from './types';
 
 interface HaveMember {
-  events: {};
-
   size: number;
 
   add(member: Member): void;
