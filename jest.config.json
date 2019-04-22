@@ -1,0 +1,9 @@
+{
+  "preset": "ts-jest",
+  "bail": 1,
+  "testRegex": ["/tests/.*\\.test\\.ts$", "/specs/.*\\.spec\\.ts$"],
+  "moduleFileExtensions": ["js", "ts"],
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/*.ts"],
+  "coverageReporters": ["text", "html", "lcov"]
+}
