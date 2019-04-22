@@ -2,13 +2,39 @@
   "name": "@eldynn/index",
   "version": "1.1.1",
   "description": "A simple library to handle a directory of users and groups.",
+  "author": "Robin BAILLARGEAUX",
+  "license": "MIT",
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "not last 2 ie version",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">= 11.0.0",
+    "npm": ">= 6.0.0"
+  },
   "main": "./build/umd/index.js",
   "module": "./build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eldynn/index.git"
+  },
+  "homepage": "https://github.com/Eldynn/index#readme",
+  "bugs": {
+    "url": "https://github.com/Eldynn/index/issues"
+  },
+  "keywords": [
+    "typescript",
+    "library",
+    "users",
+    "groups"
+  ],
   "scripts": {
     "prepare": "npm run build",
     "security": "npm audit",
     "pretest": "npm run prepare",
-    "test": "jest --coverage --colors --bail --expand",
+    "test": "jest --config jest.config.json --colors --expand",
     "test:watch": "npm test -- --watch",
     "test:ci": "npm test -- --ci --runInBand --reporters=default --reporters=jest-junit",
     "precodacy:ci": "npm run test:ci",
@@ -19,27 +45,16 @@
     "docs": "tplant --input src/index.ts > docs/index.puml",
     "postdocs": "bash ./scripts/docs.sh"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Eldynn/index.git"
-  },
-  "keywords": [
-    "typescript",
-    "library",
-    "users",
-    "groups"
-  ],
-  "author": "Robin BAILLARGEAUX",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Eldynn/index/issues"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "files": [
     "/build/index.js",
     "/build/umd/index.js",
     "/build/*.d.ts"
   ],
-  "homepage": "https://github.com/Eldynn/index#readme",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
@@ -74,119 +89,5 @@
     "tslib": "^1.9.3",
     "typedoc": "^0.14.2",
     "typescript": "^3.4.2"
-  },
-  "browserslist": [
-    "> 5%",
-    "last 2 versions",
-    "not last 2 ie version",
-    "not dead"
-  ],
-  "engines": {
-    "node": ">= 11.0.0",
-    "npm": ">= 6.0.0"
-  },
-  "prettier": {
-    "singleQuote": true
-  },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "plugins": [
-      "@typescript-eslint",
-      "prettier",
-      "import",
-      "jest"
-    ],
-    "extends": [
-      "airbnb-base",
-      "plugin:@typescript-eslint/recommended",
-      "prettier",
-      "prettier/@typescript-eslint",
-      "plugin:jest/recommended"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error"
-      ],
-      "import/prefer-default-export": 0
-    },
-    "settings": {
-      "import/resolver": {
-        "typescript": {}
-      }
-    },
-    "env": {
-      "jest/globals": true
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test",
-      "postversion": "bash ./scripts/postversion.sh"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,json,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.ts": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testRegex": [
-      "/tests/.*\\.test\\.ts$",
-      "/specs/.*\\.spec\\.ts$"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "ts"
-    ],
-    "collectCoverageFrom": [
-      "src/*.ts"
-    ],
-    "coverageReporters": [
-      "text",
-      "html",
-      "lcov"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/npm",
-        {
-          "tarballDir": "dist"
-        }
-      ],
-      [
-        "@semantic-release/github",
-        {
-          "assets": "dist/*.tgz"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "docs",
-            "package.json"
-          ]
-        }
-      ]
-    ]
   }
 }
