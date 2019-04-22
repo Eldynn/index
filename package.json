@@ -13,7 +13,7 @@
     "test:ci": "npm test -- --ci --runInBand --reporters=default --reporters=jest-junit",
     "precodacy:ci": "npm run test:ci",
     "codacy:ci": "codacy-coverage < ./coverage/lcov.info",
-    "build": "rollup --config",
+    "build": "rollup --config rollup.config.ts",
     "build:watch": "npm run build -- --watch",
     "predocs": "typedoc --module \"commonjs\" --out docs src/",
     "docs": "tplant --input src/index.ts > docs/index.puml",
