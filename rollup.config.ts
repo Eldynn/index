@@ -5,7 +5,6 @@ import { terser } from 'rollup-plugin-terser';
 
 export default {
   input: './src/index.ts',
-  plugins: [typescript(), sourcemaps(), terser()],
   output: [
     {
       file: './build/umd/index.js',
@@ -18,5 +17,6 @@ export default {
       format: 'esm',
       sourcemap: true
     }
-  ]
+  ],
+  plugins: [typescript(), sourcemaps(), terser()]
 };
