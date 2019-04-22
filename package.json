@@ -36,7 +36,7 @@
   },
   "files": [
     "/build/index.js",
-    "/build/module/index.js",
+    "/build/umd/index.js",
     "/build/*.d.ts"
   ],
   "homepage": "https://github.com/Eldynn/index#readme",
