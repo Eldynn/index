@@ -168,7 +168,8 @@
         "@semantic-release/git",
         {
           "assets": [
-            "docs"
+            "docs",
+            "package.json"
           ]
         }
       ]
