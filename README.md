@@ -24,13 +24,36 @@ A simple library to handle a directory of users and groups.
 
 Extract the [latest release](https://github.com/Eldynn/index/releases/latest).
 
-`<script type="text/javascript" src="Index/index.js"></script>`
+then
+
+```html
+<script type="text/javascript" src="Index/umd/index.js"></script>
+<script type="text/javascript">
+  console.info(
+    Index.Index,
+    Index.User,
+    Index.Group,
+    Index.Member,
+    Index.Profile
+  );
+</script>
+```
+
+or (recommended)
+
+```html
+<script type="module">
+  import { Index, User, Group, Member, Profile } from './Index/index.js';
+</script>
+```
 
 ### In node environment
 
 `npm install @eldynn/index`
 
-`import { Index, User, Group, Member, Profile } from '@eldynn/index';`
+```typescript
+import { Index, User, Group, Member, Profile } from '@eldynn/index';
+```
 
 ## [Documentation](https://eldynn.github.io/index/)
 
