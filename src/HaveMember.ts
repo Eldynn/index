@@ -22,7 +22,7 @@ const HaveMember = <T extends Constructor<{} & HaveEvent>>(
   Base: T
 ): Constructor<HaveMember> & T => {
   return class extends Base implements HaveMember, HaveEvent {
-    public static readonly events: string[] = [
+    public readonly events: string[] = [
       'preadd',
       'postadd',
       'predelete',
