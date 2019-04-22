@@ -17,7 +17,7 @@ const HaveEvent = <T extends Constructor<{}>>(
   Base: T
 ): Constructor<HaveEvent> & T => {
   return class extends Base implements HaveEvent {
-    public readonly events: string[] = null;
+    public readonly events: string[] = [];
 
     private readonly handlers: Map<string, Handler[]> = new Map<
       string,

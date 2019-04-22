@@ -5,7 +5,7 @@ import { Empty } from './types';
 import { User } from './User';
 
 export class Member extends HaveEvent(Empty) implements HaveEvent {
-  public static readonly events: string[] = [
+  public readonly events: string[] = [
     'prebuild',
     'postbuild',
     'predestroy',
