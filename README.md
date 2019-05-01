@@ -29,13 +29,7 @@ then
 ```html
 <script type="text/javascript" src="Index/umd/index.js"></script>
 <script type="text/javascript">
-  console.info(
-    Index.Index,
-    Index.User,
-    Index.Group,
-    Index.Member,
-    Index.Profile
-  );
+  console.info(Index.Index, Index.User, Index.Group, Index.Member);
 </script>
 ```
 
@@ -43,7 +37,7 @@ or (recommended)
 
 ```html
 <script type="module">
-  import { Index, User, Group, Member, Profile } from './Index/index.js';
+  import { Index, User, Group, Member } from './Index/index.js';
 </script>
 ```
 
@@ -52,7 +46,7 @@ or (recommended)
 `npm install @eldynn/index`
 
 ```typescript
-import { Index, User, Group, Member, Profile } from '@eldynn/index';
+import { Index, User, Group, Member } from '@eldynn/index';
 ```
 
 ## [Documentation](https://eldynn.github.io/index/)

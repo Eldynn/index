@@ -1,16 +1,6 @@
 import { HaveEvent } from './HaveEvent';
 import { HaveMember } from './HaveMember';
 import { Identity } from './Identity';
-import { Profile } from './Profile';
-import { Id } from './types';
 
 export class User extends HaveMember(HaveEvent(Identity))
-  implements HaveMember {
-  public readonly profile: Profile;
-
-  public constructor(id: Id, profile?: Profile) {
-    super(id);
-
-    this.profile = profile;
-  }
-}
+  implements HaveMember {}

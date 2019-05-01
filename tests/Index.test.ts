@@ -91,4 +91,23 @@ describe('Index', (): void => {
     expect(index.groups.size).toBe(1);
     expect(index.get(ids[1])).toBe(groupB);
   });
+
+  test('get User by Profile Property', (): void => {
+    const index = new Index(['name', 'surname', 'phoneNumber']);
+
+    const user = new User(ids[0], {
+      name: 'User 0',
+      phoneNumber: 123456789,
+      surname: 'U0',
+      status: 'online'
+    });
+
+    index.add(user);
+
+    expect(index.get(user.id)).toBe(user);
+    expect(index.getBy('name', 'Not this user')).toBeUndefined();
+    expect(index.getBy('surname', user.profile.surname)).toBe(user);
+    expect(index.getBy('phoneNumber', user.profile.phoneNumber)).toBe(user);
+    expect(index.getBy('status', user.profile.status)).toBeNull();
+  });
 });
