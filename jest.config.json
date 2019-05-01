@@ -1,7 +1,11 @@
 {
   "preset": "ts-jest",
   "bail": 1,
-  "testRegex": ["/tests/.*\\.test\\.ts$", "/specs/.*\\.spec\\.ts$"],
+  "testRegex": [
+    "/tests/.*\\.test\\.ts$",
+    "/specs/.*\\.spec\\.ts$",
+    "/specs/.*\\.stress\\.ts$"
+  ],
   "moduleFileExtensions": ["js", "ts"],
   "collectCoverage": true,
   "collectCoverageFrom": ["src/*.ts"],
