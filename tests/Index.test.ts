@@ -97,8 +97,8 @@ describe('Index', (): void => {
 
     const user = new User(ids[0], {
       name: 'User 0',
-      surname: 'U0',
       phoneNumber: 123456789,
+      surname: 'U0',
       status: 'online'
     });
 
