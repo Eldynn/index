@@ -1,7 +1,6 @@
 import { Group } from './Group';
 import { HaveEvent } from './HaveEvent';
-import { Profile } from './Profile';
-import { Empty } from './types';
+import { Empty, Profile } from './types';
 import { User } from './User';
 
 export class Member extends HaveEvent(Empty) implements HaveEvent {
