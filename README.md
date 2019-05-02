@@ -27,7 +27,7 @@ Extract the [latest release](https://github.com/Eldynn/index/releases/latest).
 then
 
 ```html
-<script type="text/javascript" src="Index/umd/index.js"></script>
+<script type="text/javascript" src="Index/umd.js"></script>
 <script type="text/javascript">
   console.info(Index.Index, Index.User, Index.Group, Index.Member);
 </script>

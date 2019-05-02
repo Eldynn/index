@@ -7,7 +7,7 @@ export default {
   input: './src/index.ts',
   output: [
     {
-      file: './build/umd/index.js',
+      file: './build/umd.js',
       format: 'umd',
       name: 'Index',
       sourcemap: true
