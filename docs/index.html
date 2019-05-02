@@ -82,13 +82,13 @@
 				<h3 id="in-browser-environment">In browser environment</h3>
 				<p>Extract the <a href="https://github.com/Eldynn/index/releases/latest">latest release</a>.</p>
 				<p>then</p>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"Index/umd/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"Index/index.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="javascript">
   <span class="hljs-built_in">console</span>.info(Index.Index, Index.User, Index.Group, Index.Member);
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<p>or (recommended)</p>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">import</span> { Index, User, Group, Member } <span class="hljs-keyword">from</span> <span class="hljs-string">'./Index/index.js'</span>;
+  <span class="hljs-keyword">import</span> { Index, User, Group, Member } <span class="hljs-keyword">from</span> <span class="hljs-string">'./Index/index.esm.js'</span>;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<h3 id="in-node-environment">In node environment</h3>
 				<p><code>npm install @eldynn/index</code></p>
