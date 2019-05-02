@@ -4,7 +4,7 @@ import prettyMs from 'pretty-ms';
 import randomstring from 'randomstring';
 import uuid from 'uuid/v4';
 
-import { Group, Index, Member, User } from '../build/umd';
+import { Group, Index, Member, User } from '../build';
 
 const result: {
   [key: string]: { min: number; max: number; average: number };

@@ -7,13 +7,13 @@ export default {
   input: './src/index.ts',
   output: [
     {
-      file: './build/umd.js',
+      file: './build/index.js',
       format: 'umd',
       name: 'Index',
       sourcemap: true
     },
     {
-      file: './build/index.js',
+      file: './build/index.esm.js',
       format: 'esm',
       sourcemap: true
     }

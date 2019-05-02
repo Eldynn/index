@@ -14,8 +14,8 @@
     "node": ">= 11.0.0",
     "npm": ">= 6.0.0"
   },
-  "main": "./build/umd.js",
-  "module": "./build/index.js",
+  "main": "./build/index.js",
+  "module": "./build/index.esm.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Eldynn/index.git"

@@ -1,4 +1,4 @@
-import { Index, User, Group, Member } from '../build/umd';
+import { Index, User, Group, Member } from '../build';
 
 const configuration = {
   groups: [
