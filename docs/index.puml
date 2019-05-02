@@ -10,24 +10,21 @@ interface HaveEvent {
     +on(event: string, callback: (save: {}, result: {}): HaveEvent
     +emit(event: string, data?: {}): HaveEvent
 }
-class Profile {
-}
 class Identity {
     +id: string
+    +profile: Record<string, any>
 }
 class User implements HaveMember {
-    +profile: Profile
 }
 class Member implements HaveEvent {
     +events: string[]
     +user: User
     +group: Group
-    +profile: Profile
+    +profile: Record<string, any>
     +destroy(): void
-    +{static} build(user: User, group: Group, profile?: Profile): Member
+    +{static} build(user: User, group: Group, profile?: Record<string, : ny>): Member
 }
 interface HaveMember {
-    +events: {}
     +size: number
     +add(member: Member): void
     +delete(member: Member): void
@@ -37,24 +34,23 @@ interface HaveMember {
 }
 class Group implements HaveMember {
     +owner: User
-    +profile: Profile
 }
 class Index {
     +users: Map<string, User>
     +groups: Map<string, Group>
     -items: Map<string, Identity>
+    -properties: string[]
+    -itemsBy: Map<string, Map<any, Identity>>
     +add(identity: Identity): Index
     +delete(identity: Identity): Index
     +get(id: string): Identity
+    +getBy(property: string, value: any): Identity
 }
 
-User *-- "1" Profile
 User *-- "1" Identity
-Group *-- "1" Profile
 Group *-- "1" Identity
 HaveMember *-- "many" Member
 HaveMember ..|> HaveEvent
-Member *-- "1" Profile
 Member o-- Group
 Member o-- User
 Index *-- "many" User
