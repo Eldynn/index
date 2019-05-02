@@ -1,4 +1,4 @@
-import { Index, User, Group, Profile, Member } from '../build/umd';
+import { Index, User, Group, Member } from '../build/umd';
 
 const configuration = {
   groups: [
@@ -56,26 +56,17 @@ const index = new Index();
 
 configuration.users.forEach(
   (user): void => {
-    const profile = new Profile(user);
-    index.add(new User(user.id, profile));
+    index.add(new User(user.id, user));
   }
 );
 
 configuration.groups.forEach(
   (group): void => {
-    const newGroup = new Group(
-      group.id,
-      index.get(group.owner) as User,
-      new Profile(group)
-    );
+    const newGroup = new Group(group.id, index.get(group.owner) as User, group);
 
     group.members.forEach(
       (member): void => {
-        Member.build(
-          index.get(member.id) as User,
-          newGroup,
-          new Profile(member)
-        );
+        Member.build(index.get(member.id) as User, newGroup, member);
       }
     );
 

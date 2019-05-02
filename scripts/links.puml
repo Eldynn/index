@@ -1,11 +1,8 @@
 @startuml
-User *-- "1" Profile
 User *-- "1" Identity
-Group *-- "1" Profile
 Group *-- "1" Identity
 HaveMember *-- "many" Member
 HaveMember ..|> HaveEvent
-Member *-- "1" Profile
 Member o-- Group
 Member o-- User
 Index *-- "many" User
