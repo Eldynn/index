@@ -65,7 +65,7 @@
     "@types/randomstring": "^1.1.6",
     "@types/uuid": "^3.4.4",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
-    "@typescript-eslint/parser": "^1.6.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "codacy-coverage": "^3.4.0",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
