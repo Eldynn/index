@@ -81,7 +81,7 @@
     "jest-junit": "^7.0.0",
     "lint-staged": "^10.0.8",
     "prettier": "^1.16.4",
-    "pretty-ms": "^6.0.0",
+    "pretty-ms": "^6.0.1",
     "randomstring": "^1.1.5",
     "rollup": "^1.11.3",
     "rollup-plugin-sourcemaps": "^0.4.2",
